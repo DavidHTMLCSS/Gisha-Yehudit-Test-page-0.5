@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gisha-Yehudit Test page 0.01</title>
+    <link rel="icon" type="image/ico" href="images/for-page/web-tab-logo.png">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,25 +11,45 @@
     <div>
         <div class="container-slider">
             <div class="overlay"></div>
-            <img class="img-slider" src="images/for-page/1.JPG">
-            <img class="img-slider" src="images/for-page/2.JPG"> 
-            <img class="img-slider" src="images/for-page/3.JPG">
-            <img class="img-slider" src="images/for-page/4.JPG">
+            <img class="img-slider" alt="" src="images/for-page/1.jpg">
+            <img class="img-slider" alt="" src="images/for-page/2.JPG"> 
+            <img class="img-slider" alt="" src="images/for-page/3.JPG">
+            <img class="img-slider" alt="" src="images/for-page/4.JPG">
             <div>
                 <img class="logo-image" src="images/for-page/header-logo.png">
             </div>
         </div>
-        <!-- Добавляем кнопку-меню и контекстное меню -->
-        <div class="menu-button" onclick="toggleMenu()">☰</div>
+        <div class="menu-button" onclick="toggleMenu()"> ☰ </div>
         <div id="page-overlay" class="page-overlay" onclick="toggleMenu()"></div>
         <div id="context-menu" class="context-menu">
             <div class="close-button" onclick="toggleMenu()">✖</div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Афиша</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">О ребе</a></li>
+                <li><a href="#">Контакты</a></li>
             </ul>
+        </div>
+    </div>
+    <div style="background-color: #00719C;">
+        <div class="container-about-text">
+            <h1>О нас</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit animi eveniet similique! Repudiandae aspernatur cum porro neque! Sapiente nobis minima et error non omnis corrupti suscipit! Nam sed quam quaerat eos laboriosam labore laudantium reiciendis illo aliquam laborum, amet inventore corporis totam sit iure quibusdam, velit dolore dolores ipsa qui repudiandae ea. Veritatis deleniti, odit quasi nisi quidem excepturi sit assumenda iste, facilis placeat numquam beatae possimus illo iure. Obcaecati porro vel illo facilis ducimus ullam, minima eligendi tempore!</p>
+            <img class="image-about" alt="" src="images/for-page/about-image.JPG"/>    
+        </div>
+    </div>
+    <div style="background-color: #009537;">  
+        <div class="container-about-rebe">
+            <img class="image-rebe-David" alt="" src="images/for-page/Rebe-David.jpg"/> 
+            <div class="container-about-rebe-text" >
+                <h1>О Ребе</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsam eveniet consectetur eaque laboriosam, corrupti amet natus suscipit reprehenderit temporibus possimus repellat mollitia ullam hic deserunt vel corporis fuga tempora eligendi officiis pariatur rerum quibusdam aliquid laudantium! Ad animi officiis inventore incidunt in. Et quod, quas cumque, laudantium tenetur amet vero culpa dolores aperiam quae, modi rem reiciendis. Quo nam repellendus ipsam atque aspernatur? Nam beatae odit laborum pariatur nihil eos ut corporis, libero assumenda unde laudantium et illum necessitatibus nemo officia maxime incidunt neque alias praesentium suscipit ipsa ad blanditiis excepturi perferendis! Exercitationem corrupti ab repudiandae sunt pariatur vel.</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container-contact">
+
         </div>
     </div>
     <script src="script.js"></script>
