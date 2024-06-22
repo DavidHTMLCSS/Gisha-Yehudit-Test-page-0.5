@@ -19,37 +19,46 @@
                 <img class="logo-image" src="images/for-page/header-logo.png">
             </div>
         </div>
-        <div class="menu-button" onclick="toggleMenu()"> ☰ </div>
+        <div class="menu-button" onclick="toggleMenu()" style="text-shadow: 3px 3px black;"> ☰ </div>
         <div id="page-overlay" class="page-overlay" onclick="toggleMenu()"></div>
         <div id="context-menu" class="context-menu">
             <div class="close-button" onclick="toggleMenu()">✖</div>
             <ul>
+                <li><a href="#poster" style="margin-bottom: 3%;"> Проект<br>"Еврейской молодёжи" </a></li>
+                <hr style= "margin-bottom: 3%;">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#rav">О ребе</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <hr style="margin-bottom: 8%; margin-top: 5%;">
                 <li><a href="#">Афиша</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">О ребе</a></li>
-                <li><a href="#">Контакты</a></li>
             </ul>
         </div>
     </div>
-    <div style="background-color: #00719C;">
-        <div class="container-about-text">
+    <div class="container-info">
+        <a name="poster"></a>
+        <img class="info-image" src="images/for-page/project-teen-full-img.jpg">
+    </div>
+    <div class="container-about-text">
+        <a name="about"></a>
+        <div class="text-content-about">
             <h1>О нас</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sit animi eveniet similique! Repudiandae aspernatur cum porro neque! Sapiente nobis minima et error non omnis corrupti suscipit! Nam sed quam quaerat eos laboriosam labore laudantium reiciendis illo aliquam laborum, amet inventore corporis totam sit iure quibusdam, velit dolore dolores ipsa qui repudiandae ea. Veritatis deleniti, odit quasi nisi quidem excepturi sit assumenda iste, facilis placeat numquam beatae possimus illo iure. Obcaecati porro vel illo facilis ducimus ullam, minima eligendi tempore!</p>
-            <img class="image-about" alt="" src="images/for-page/about-image.JPG"/>    
         </div>
+        <img class="image-about" alt="" src="images/for-page/about-image.JPG"/>    
     </div>
-    <div style="background-color: #009537;">  
-        <div class="container-about-rebe">
-            <img class="image-rebe-David" alt="" src="images/for-page/Rebe-David.jpg"/> 
-            <div class="container-about-rebe-text" >
-                <h1>О Ребе</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum ipsam eveniet consectetur eaque laboriosam, corrupti amet natus suscipit reprehenderit temporibus possimus repellat mollitia ullam hic deserunt vel corporis fuga tempora eligendi officiis pariatur rerum quibusdam aliquid laudantium! Ad animi officiis inventore incidunt in. Et quod, quas cumque, laudantium tenetur amet vero culpa dolores aperiam quae, modi rem reiciendis. Quo nam repellendus ipsam atque aspernatur? Nam beatae odit laborum pariatur nihil eos ut corporis, libero assumenda unde laudantium et illum necessitatibus nemo officia maxime incidunt neque alias praesentium suscipit ipsa ad blanditiis excepturi perferendis! Exercitationem corrupti ab repudiandae sunt pariatur vel.</p>
-            </div>
+    <div class="container-about-rebe">
+        <a name="rav"></a>
+        <div class="text-rebe">
+            <h1>О раве</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt dolor soluta id fugiat, hic commodi deserunt molestiae aliquid ullam saepe dolorem quaerat nesciunt quasi nulla voluptatum. Rem voluptates reiciendis, facilis tenetur maxime at odio vero. Sed vero sint impedit, sequi eligendi tempore doloremque aliquid eaque distinctio ex? Odit tempore quidem quam unde! Autem magni in, quod quaerat officiis similique ipsa recusandae aut? Voluptates sunt veniam totam ipsam temporibus placeat eveniet consectetur, fugit adipisci sapiente enim perferendis asperiores ut delectus minus.</p>
         </div>
+        <img class="image-rebe-David" alt="" src="images/for-page/Rebe-David.jpg"/>
     </div>
-    <div>
-        <div class="container-contact">
-
+    <div class="container-contact">
+        <a name="Contact"></a>
+        <div class="contact">
+            <h1>Хотите получать новости о наших мероприятий и уроков?</h1>
+            <h2>Заполните форму снизу и мы свяжимся с вами!</h2>
         </div>
     </div>
     <script src="script.js"></script>

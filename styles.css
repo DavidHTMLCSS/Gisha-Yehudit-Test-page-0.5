@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+html { 
+    scroll-behavior: smooth; 
+}
+
 * {
     font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+button{
+    border: none;
+    background-color: white;
+}
+
+.info-image{
+    position: relative;
+    max-width: 60%;
+    height: 100%;
+    transform: scale(1.67, 1);
+    left:20%;
+    animation: none;
 }
 
 .container-slider {
@@ -16,88 +34,131 @@
     align-items: center;
 }
 
-.container{
-    background-color: white;
-    height: 100lvh;
+.container-info{
+    height: 100vh;
     width: 100%;
+    position: relative;
+    display: flex;
 }
 
 .container-about-text{
     background-color: #00719C;
-    width: 40%;
-    height: 100lvh;
-    text-align: start;
-    color: white;
+    height: 100vh;
+    width: 100%;
     position: relative;
-    display: grid;
-    left: 10%;
+    display: flex;
+}
+    
+
+.text-content-about{
+    width: 40%;
+    height: 50%;
+    color: white;
+    text-align: start;
+    position: relative;
+    top: 20%;
+    left: 8%;
 }
 
-.container-about-text h1{ 
-    height: auto;
-    margin-top: 20%;
+
+.text-content-about h1{ 
     font-size: 280%;
-
 }
 
-.container-about-text p{ 
+.text-content-about p{ 
     text-indent: 20px;
     text-align: start;
     font-size: 150%;
     margin-top: 10%;
-    margin-bottom: 30%;
+    margin-bottom: 10%;
 }
 
 .container-about-rebe{
     background-color: #009537;
-    width: 40%;
     height: 100lvh;
-    text-align: start;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.text-rebe {
+    width: 40%;
+    height: 50%;
     color: white;
+    text-align: start;
     position: relative;
-    display: grid;
-    left: 10%;
+    top: 23%;
+    left: 55%;
 }
 
-.container-about-rebe-text{
-    left: 80%;
-    position: relative;
-    top: -40%;
-}
-
-.container-about-rebe-text h1{ 
+.text-rebe h1{ 
     height: auto;
-    margin-top: 20%;
     font-size: 280%;
 
 }
 
-.container-about-rebe-text p{ 
+.text-rebe p{ 
     text-indent: 20px;
     text-align: start;
     font-size: 150%;
     margin-top: 10%;
-    margin-bottom: 30%;
+    margin-bottom: 10%;
 }
 
 .image-rebe-David{
     animation: none;
-    position: relative;
-    height: 100%;
-    width: 50%;
-    left: 0;
-    top: 60%;
+    position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 15%;
+    left: 10%;
     border-radius: 50px;
+
 }
 
 .image-about{
     animation: none;
-    position: absolute;
-    height: 70%;
-    width: 60%;
-    left: 150%;
+    position: relative;
+    height: 60%;
+    width: 40%;
+    left: 14%;
     top: 15%;
     border-radius: 50px;
+}
+
+.container-contact{
+    background-image: url(images/for-page/Contact.jpg);
+    background-position: 100% 0;;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100lvh;
+    animation: none;
+    z-index: 5;
+}
+
+.contact{
+    border-style: solid;
+    position: relative;
+    width: 800px;
+    height: 200px;
+    text-align: center;
+    left: 30%;
+    top: 20%;
+
+}
+
+.contact h1 {
+    color: yellow;
+    height: auto;
+    font-size: 280%;
+    margin-bottom: 20px;
+}
+
+.contact h2 {
+    color: white;
+    height: auto;
+    font-size: 200%;
 }
 
 .overlay {
@@ -173,17 +234,17 @@ img:nth-of-type(4) {
 .context-menu {
     position: fixed;
     top: 0;
-    right: -250px; /* Начальное положение за пределами экрана */
+    right: -250px;
     width: 250px;
     height: 100%;
-    background-color: white; /* Сменить фоновый цвет на серый */
+    background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 500; /* Повышаем z-index, чтобы меню было выше затемнения */
-    transition: right 0.3s ease; /* Анимация перемещения */
+    z-index: 500;
+    transition: right 0.3s ease; 
 }
 
 .context-menu.open {
-    right: 0; /* Конечное положение меню */
+    right: 0; 
 }
 
 .context-menu ul {
@@ -210,6 +271,7 @@ img:nth-of-type(4) {
     padding: 20px;
     font-size: 24px;
     cursor: pointer;
+    color: black;
 }
 
 .page-overlay {
@@ -219,9 +281,9 @@ img:nth-of-type(4) {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Затемнение страницы */
-    z-index: 400; /* Затемнение должно быть ниже меню */
-    transition: opacity 0.3s ease; /* Анимация для затемнения */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 400;
+    transition: opacity 0.3s ease;
 }
 
 .page-overlay.open {
@@ -232,29 +294,26 @@ img:nth-of-type(4) {
 @media only screen and (max-width: 724px) {
 
     .container-about-text{
-        background-color: #00719C;
-        width: 10%;
-        height: 500px;
-        text-align: start;
-        display: inline-block;
-    }
-
-    .container-about-text{
-        height: 1500px;
-        width: 70%;
-        text-align: start;
-        color: white;
+        display: flex;
+        height: 100vhx;
         position: relative;
     }
 
+    .text-content-about{
+        width: 85%;
+        top: 10%;
+    }
+
+    .text-content-about p{
+        font-size: 120%;
+    }
+
     .image-about{
-        animation: none;
         position: absolute;
-        height: 40%;
-        width: 100%;
-        left: 0;
-        top: 55%;
-        border-radius: 50px;
+        height: 30%;
+        width: 85%;
+        left: 8%;
+        top: 60%;
     }
 
     .container-about-text p{ 
@@ -264,46 +323,25 @@ img:nth-of-type(4) {
 
     /* ********************** */
 
-    .container-about-rebe{
-        background-color: #009537;
-        width: 70%;
-        height: 1500px;
-        text-align: start;
-        color: white;
+
+    .text-rebe{
+        height: 40%;
         position: relative;
-        display: inline-block;
-        left: 10%;
+        left: 8%;
+        width: 85%;
+        top: 10%;
     }
     
-    .container-about-rebe-text{
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-    
-    .container-about-rebe-text h1{ 
-        height: auto;
-        margin-top: 20%;
-        font-size: 280%;
-    
-    }
-    
-    .container-about-rebe-text p{ 
-        text-indent: 20px;
-        text-align: start;
-        font-size: 150%;
-        margin-top: 10%;
-        margin-bottom: 30%;
+    .text-rebe p{
+        font-size: 120%;
     }
     
     .image-rebe-David{
-        animation: none;
+        max-width: 45%;
+        height: auto;
         position: absolute;
-        height: 30%;
-        width: 100%;
-        top: 65%;
-        border-radius: 50px;
+        top: 60%;
+        left: 25%;
     }
 
 }
-
