@@ -35,6 +35,10 @@ button{
 }
 
 .container-info{
+    background-image: url(images/for-page/project-teen-full-img.jpg);
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     position: relative;
@@ -128,7 +132,7 @@ button{
 
 .container-contact{
     background-image: url(images/for-page/Contact.jpg);
-    background-position: 100% 0;;
+    background-position: 100% 0;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -138,12 +142,11 @@ button{
 }
 
 .contact{
-    border-style: solid;
     position: relative;
     width: 800px;
     height: 200px;
     text-align: center;
-    left: 30%;
+    left: 29%;
     top: 20%;
 
 }
@@ -291,7 +294,20 @@ img:nth-of-type(4) {
     opacity: 1;
 }
 
-@media only screen and (max-width: 724px) {
+@media only screen and (max-width: 726px) {
+
+    .container-info{
+        background-image: url(images/for-page/project-teen.jpg);
+        background-position: 100% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+
+    /* ********************** */
 
     .container-about-text{
         display: flex;
@@ -323,7 +339,6 @@ img:nth-of-type(4) {
 
     /* ********************** */
 
-
     .text-rebe{
         height: 40%;
         position: relative;
@@ -342,6 +357,33 @@ img:nth-of-type(4) {
         position: absolute;
         top: 60%;
         left: 25%;
+    }
+
+    /* ********************** */
+
+    .container-contact{
+        background-position: 50% 100%;
+    }
+
+    .contact{
+        position: relative;
+        width: 500px;
+        height: 200px;
+        text-align: center;
+        left: 5%;
+        top: 8%;
+    
+    }
+
+    .contact h1 {
+        height: auto;
+        font-size: 240%;
+        margin-bottom: 15px;
+    }
+    
+    .contact h2 {
+        height: auto;
+        font-size: 200%;
     }
 
 }
