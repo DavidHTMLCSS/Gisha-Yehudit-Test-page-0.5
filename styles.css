@@ -9,238 +9,89 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-button{
-    border: none;
-    background-color: white;
-}
-
-.info-image{
-    position: relative;
-    max-width: 60%;
-    height: 100%;
-    transform: scale(1.67, 1);
-    left:20%;
-    animation: none;
-}
-
-.container-slider {
-    height: 100lvh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-info{
-    background-image: url(images/for-page/project-teen-full-img.jpg);
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-}
-
-.container-about-text{
-    background-color: #00719C;
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-}
-    
-
-.text-content-about{
-    width: 40%;
-    height: 50%;
     color: white;
-    text-align: start;
-    position: relative;
-    top: 20%;
-    left: 8%;
 }
 
-
-.text-content-about h1{ 
-    font-size: 280%;
-}
-
-.text-content-about p{ 
-    text-indent: 20px;
-    text-align: start;
-    font-size: 150%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-.container-about-rebe{
-    background-color: #009537;
-    height: 100lvh;
-    width: 100%;
-    position: relative;
-    display: flex;
-}
-
-.text-rebe {
-    width: 40%;
-    height: 50%;
-    color: white;
-    text-align: start;
-    position: relative;
-    top: 23%;
-    left: 55%;
-}
-
-.text-rebe h1{ 
-    height: auto;
-    font-size: 280%;
-
-}
-
-.text-rebe p{ 
-    text-indent: 20px;
-    text-align: start;
-    font-size: 150%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-
-.image-rebe-David{
-    animation: none;
-    position: absolute;
-    max-width: 30%;
-    height: auto;
-    top: 15%;
-    left: 10%;
-    border-radius: 50px;
-
-}
-
-.image-about{
-    animation: none;
-    position: relative;
-    height: 60%;
-    width: 40%;
-    left: 14%;
-    top: 15%;
-    border-radius: 50px;
-}
-
-.container-contact{
-    background-image: url(images/for-page/Contact.jpg);
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100lvh;
-    justify-content: center;
-    animation: none;
-    z-index: 5;
-}
-
-.contact{
-    justify-content: center;
-    position: relative;
-    width: 800px;
-    height: 200px;
-    text-align: center;
-    left: 28%;
-    top: 20%;
-
-}
-
-.contact h1 {
-    color: yellow;
-    height: auto;
-    font-size: 280%;
-    margin-bottom: 20px;
-}
-
-.contact h2 {
-    color: white;
-    height: auto;
-    font-size: 200%;
-}
-
-.overlay {
+.overlay{
     background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    height: 100lvh;
 }
 
-.logo-image {
-    position: relative;
-    width: 80%;
-    height: 80%;
-    left: 10%;
-    z-index: 20;
-    animation: none;
+.page-overlay.open {
+    display: block;
+    opacity: 1;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    75% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-img {
+.bg-home-images{
+    position: static;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: fade 10s ease-in-out infinite alternate;
+    height: 100lvh;
+    background-image: url(images/for-page/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: bgChange 20s linear infinite;
 }
 
-img:nth-of-type(1) {
-    animation-delay: 0s;
+@keyframes bgChange {
+    0%{
+        background-image: url(images/for-page/1.jpg);
+    }
+    20%{
+        background-image: url(images/for-page/1.jpg);
+    }
+    25%{
+        background-image: url(images/for-page/2.jpg);
+    }
+    45%{
+        background-image: url(images/for-page/2.jpg);
+    }
+    50%{
+        background-image: url(images/for-page/3.jpg);
+    }
+    70%{
+        background-image: url(images/for-page/3.jpg);
+    }
+    75%{
+        background-image: url(images/for-page/4.jpg);
+    }
+    95%{
+        background-image: url(images/for-page/4.jpg);
+    }
 }
-img:nth-of-type(2) {
-    animation-delay: 2.5s;
+
+.content{
+    position: absolute;
+    display: flex;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 49%;
 }
-img:nth-of-type(3) {
-    animation-delay: 5s;
-}
-img:nth-of-type(4) {
-    animation-delay: 7.5s;
+
+.home-logo{
+    position: static;
+    display: flex;
+    width: 100%;
 }
 
 .menu-button {
     position: fixed;
     top: 20px;
-    right: 20px;
-    font-size: 30px;
+    right: 25px;
+    font-size: 50px;
     z-index: 300;
     cursor: pointer;
     color: white;
+    text-shadow: 3px 3px black;
 }
 
 .context-menu {
     position: fixed;
     top: 0;
-    right: -250px;
-    width: 250px;
+    right: -350px;
+    width: 350px;
     height: 100%;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
@@ -259,6 +110,7 @@ img:nth-of-type(4) {
 
 .context-menu ul li {
     padding: 10px 0;
+    cursor: pointer;
 }
 
 .context-menu ul li a {
@@ -271,10 +123,15 @@ img:nth-of-type(4) {
     background-color: #f0f0f0;
 }
 
+.social-button{
+    display: inline-block;
+    cursor: pointer;
+}
+
 .close-button {
     text-align: right;
     padding: 20px;
-    font-size: 24px;
+    font-size: 40px;
     cursor: pointer;
     color: black;
 }
@@ -291,101 +148,336 @@ img:nth-of-type(4) {
     transition: opacity 0.3s ease;
 }
 
-.page-overlay.open {
-    display: block;
-    opacity: 1;
+.content-about{
+    position: relative;
+    background-color: #00719C;
+    width: 100%;
+    height: 100vh;
 }
 
-@media only screen and (max-width: 726px) {
+.text-about{
+    position: absolute;
+    width: 800px;
+    height: 200px;
+    transform: translate(-50, -50);
+    top: 30%;
+    left: 5%;
+}
 
-    .container-info{
-        background-image: url(images/for-page/project-teen.jpg);
-        background-position: 100% 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        width: 100%;
-        position: relative;
-        display: flex;
+p{
+    text-indent: 20px;
+    font-size: 28px;
+    margin-top: 10%;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+.image-block-about-us{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    right: 30%;
+    top: 50%;
+    
+}
+
+.image-about-us{
+    border-radius: 50px;
+    width: 500px;
+}
+
+.contetnt-rebe{
+    position: relative;
+    background-color: #009537;
+    width: 100%;
+    height: 100vh;
+}
+
+.content-contact{
+    background-image: url(images/for-page/Contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    object-position: bottom 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.text-rav{
+    position: absolute;
+    width: 800px;
+    height: 200px;
+    transform: translate(-50, -50);
+    top: 30%;
+    left: 50%;
+}
+
+
+.image-rav{
+    position: relative;
+    width: 60%;
+    left: -100%;
+    top: -250%;
+    border-radius: 50px;
+}
+
+.text-contact{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    top: 30%;
+}
+
+.text-contact h1{
+    color: yellow;
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: black;
+  }
+
+  input[type=tel], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: black;
+  }
+
+  input[type=submit] {
+    width: 50%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .Telephone-Number{
+    color: white;
+    font-size: 40px;
+    padding: 25px;
+    cursor: pointer;
+  }
+
+  .Telephone-Number:hover{
+    text-decoration: none;
+    font-size: 42px;
+    color: yellow;
+  }
+  
+
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+
+
+
+@media only screen and (max-width: 440px) {
+
+    .menu-button {
+        top: 15px;
+        font-size: 35px;
+        right: 15px;
     }
 
-    /* ********************** */
-
-    .container-about-text{
-        display: flex;
-        height: 100vhx;
-        position: relative;
+    .context-menu {
+        right: -250px;
+        width: 250px;
     }
 
-    .text-content-about{
-        width: 85%;
-        top: 10%;
-    }
-
-    .text-content-about p{
-        font-size: 120%;
-    }
-
-    .image-about{
-        position: absolute;
-        height: 30%;
-        width: 85%;
-        left: 8%;
-        top: 60%;
-    }
-
-    .container-about-text p{ 
+    p{
+        text-indent: 20px;
+        font-size: 20px;
         margin-top: 10%;
-        margin-bottom: 20%;
+    }
+    
+
+    /* ********************** */
+
+    .content-about{
+        height: 940px;
+    }
+
+    .text-about{
+        width: 300px;
+        height: 80vh;
+        top: 5%;
+        left: 8%;
+    }
+
+    .image-block-about-us{
+        transform: translate(-50%, -50%);
+        width: 40%;
+        top: 78%;
+        left: 30%;
+        right: 60%;
+    }
+    
+    .image-about-us{
+        width: 280px;
     }
 
     /* ********************** */
 
-    .text-rebe{
-        height: 40%;
-        position: relative;
+    .contetnt-rebe{
+        height: 1000px;
+    }
+    
+    
+    .text-rav{
+        width: 300px;
+        height: 80vh;
+        top: 5%;
         left: 8%;
-        width: 85%;
+    }
+    
+    
+    .image-rav{
+        width: 100%;
+        left: 1%;
+        top: 5%;
+        border-radius: 50px;
+    }
+
+    /* ********************** */
+
+    .content-contact{
+        object-position: left 20%;
+    }
+
+    .text-contact h1{
+        font-size: 28px;
+    }
+
+    .text-contact h2{
+        font-size: 20px;
+    }
+
+    input[type=text], select{
+        width: 70%;
+    }
+
+    input[type=tel], select {
+        width: 70%;
+    }
+
+    input[type=submit] {
+        padding: 14px 20px;
+        margin: 35px 0;
+    }
+
+    .Telephone-Number{
+        color: white;
+        font-size: 20px;
+        padding: 0;
+        padding-top: 5%;
+    }
+    
+    .text-contact{
         top: 10%;
     }
-    
-    .text-rebe p{
-        font-size: 120%;
+
+}
+
+
+
+
+
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+/* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
+
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+
+
+    .content-about{
+        height: 1100px;
+    }
+
+
+    .text-about{
+        width: 600px;
+        height: 200px;
+        transform: translate(-50, -50);
+        top: 5%;
+        left: 5%;
+    }
+
+    .image-block-about-us{  
+        transform: translate(-50%, -50%);
+        width: 10px;
+        display: grid;
+        justify-content: center;
+        top: 72%; 
+        left: 50%;
+    }
+
+    .content-contact{
+        object-fit: cover;
+        object-position: 50% 100%;
+        height: 1200px;
     }
     
-    .image-rebe-David{
-        max-width: 45%;
-        height: auto;
-        position: absolute;
-        top: 60%;
-        left: 25%;
+    .image-about-us{
+        width: 400px;
     }
+
+    p{
+        text-indent: 20px;
+        font-size: 28px;
+    }
+
 
     /* ********************** */
 
-    .container-contact{
-        background-position: 50% 100%;
+    .contetnt-rebe{
+        height: 1200px;
     }
-
-    .contact{
-        position: relative;
-        width: 450px;
+    
+    
+    .text-rav{
+        width: 600px;
         height: 200px;
-        text-align: center;
+        transform: translate(-50, -50);
+        top: 5%;
         left: 5%;
-        top: 8%;
-    
-    }
-
-    .contact h1 {
-        height: auto;
-        font-size: 240%;
-        margin-bottom: 15px;
     }
     
-    .contact h2 {
-        height: auto;
-        font-size: 200%;
+    
+    .image-rav{
+        width: 80%;
+        left: 18%;
+        top: 10%;
+        border-radius: 50px;
     }
 
 }

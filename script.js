@@ -19,21 +19,29 @@ document.querySelectorAll('#context-menu a').forEach(anchor => {
     anchor.addEventListener('click', function(event) {
         event.preventDefault(); // Предотвращаем стандартное поведение ссылки
 
-        var targetId = this.getAttribute('href').substring(1); // Получаем ID целевого элемента
-        var targetElement = document.getElementsByName(targetId)[0]; // Находим целевой элемент по имени
+        var href = this.getAttribute('href');
 
-        if (targetElement) {
-            // Плавный переход к якорю
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+        if (href.startsWith('http')) {
+            // Если href содержит ссылку, открываем ее в новой вкладке
+            window.open(href, '_blank');
+        } else {
+            // Если href это якорь, обрабатываем переход к якорю
+            var targetId = href.substring(1); // Получаем ID целевого элемента
+            var targetElement = document.getElementsByName(targetId)[0]; // Находим целевой элемент по имени
 
-            // Закрываем меню
-            var menu = document.getElementById('context-menu');
-            var overlay = document.getElementById('page-overlay');
-            var body = document.body;
+            if (targetElement) {
+                // Плавный переход к якорю
+                targetElement.scrollIntoView({ behavior: 'smooth' });
 
-            menu.classList.remove('open');
-            overlay.classList.remove('open');
-            body.style.overflow = 'auto'; // Возобновить прокрутку страницы
+                // Закрываем меню
+                var menu = document.getElementById('context-menu');
+                var overlay = document.getElementById('page-overlay');
+                var body = document.body;
+
+                menu.classList.remove('open');
+                overlay.classList.remove('open');
+                body.style.overflow = 'auto'; // Возобновить прокрутку страницы
+            }
         }
     });
 });
