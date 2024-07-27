@@ -9,7 +9,6 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
 }
 
 .overlay{
@@ -416,7 +415,7 @@ input[type=text], select {
 /* ********************** *//* ********************** *//* ********************** *//* ********************** *//* ********************** */
 
 
-@media screen and (min-width: 767px) and (max-width: 1024px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
 
 
     .content-about{
